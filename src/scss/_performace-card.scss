@@ -1,0 +1,40 @@
+.performance__card {
+    background-color: $white;
+    padding: 15px;
+    border-radius: 5px;
+    &__heading {
+        i {}
+    }
+    .card__graph {
+        &__title {}
+        &__sub_title {}
+        &__field {
+            .vertical__measure {
+                span {}
+            }
+            .horizontal__measure {
+                span {}
+            }
+            .values {
+                .add_camp {}
+                .test_a1 {}
+                .test_be {}
+                .ebook_4 {}
+                .figma_5 {}
+                .share_26 {}
+                .campaign_7 {}
+                .test_b {}
+            }
+        }
+        &__color__definition {
+            .define__add_camp {}
+            .define__test_a1 {}
+            .define__test_b2 {}
+            .define__ebook_4 {}
+            .define__figma_5 {}
+            .define__share_26 {}
+            .define__campaign_7 {}
+            .define__test_b {}
+        }
+    }
+}

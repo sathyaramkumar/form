@@ -1,0 +1,65 @@
+// navbar layout
+.navbar {
+    @include flex (row);
+    &__nav {
+        @include flex-jc-ai (row , center , center);
+    }
+    &__notification {
+        @include flex (row);
+    }
+    &__avator {
+        @include flex (row);
+    }
+}
+
+//container 
+.container {
+    width: 1300px;
+    margin: auto;
+}
+
+// status bar 
+.status__bar {
+    @include flex (row);
+    &__profile {
+        @include flex-jc-ai (row , center ,center);
+    }
+    &__btn__group {
+        @include flex (row);
+    }
+}
+
+// card layout
+.container__grid {
+    display: grid;
+    grid-template-areas: 
+    'performance  performance status growth'
+    'performance  performance status growth'
+    'performance  performance rate campaign'
+    'performance  performance rate post';
+    grid-gap: 15px;
+}
+
+.performance__card {
+    grid-area: performance;
+}
+
+.status__card {
+    grid-area: status;
+}
+
+.rate__card {
+    grid-area: rate;
+}
+
+.growth__card {
+    grid-area: growth;
+}
+
+.campaign__card {
+    grid-area: campaign;
+}
+
+.post__card {
+    grid-area: post;
+}

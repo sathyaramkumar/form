@@ -1,0 +1,37 @@
+* , 
+::before ,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $background;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul , li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+@mixin flex ($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin flex-jc-ai ($direction , $jc , $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $direction;
+}
