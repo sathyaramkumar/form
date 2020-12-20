@@ -7,11 +7,19 @@
 
         <!-- icon link -->
         <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+        <!-- google font family link -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"> 
+
+        <!-- css link -->
+        <link rel="stylesheet" href="src/scss/style.css">
     </head>
     <body>
         <div class="wrap">
 
             <!-- navbar -->
+
             <header class="navbar">
 
                 <div class="navbar__brand">
@@ -58,15 +66,15 @@
                             <ul class="dropdown__list">
                                 <li class="dropdown__item">
                                     <i class="fas fa-circle"></i>
-                                    <b>New notification</b>
+                                    New notification
                                 </li>
                                 <li class="dropdown__item">
                                     <i class="fas fa-circle"></i>
-                                    <b>New notification</b>
+                                    New notification
                                 </li>
                                 <li class="dropdown__item">
                                     <i class="fas fa-circle"></i>
-                                    <b>New notification</b>
+                                    New notification
                                 </li>
                             </ul>
                         </div>
@@ -89,6 +97,10 @@
                 </div>
             </header>
 
+            <!-- container -->
+
+            <div class="container">
+
             <!-- status bar -->
 
             <div class="status__bar">
@@ -105,16 +117,16 @@
 
                 <div class="status__bar__btn__group">
                     
-                    <button class="btn__group__download btn__group__btn">
+                    <button class="btn__download btn">
                         <i class="fas fa-download"></i>
                     </button>
-                    <button class="btn__group__edit btn__group__btn">
+                    <button class="btn__edit btn">
                         <i class="fas fa-pencil-alt"></i>
                     </button>
 
-                    <div class="btn__group__dropdown">
+                    <div class="dropdown">
                         <button class="dropdown__btn">
-                            Action<i class="fas fa-angle-down"></i>
+                            Actions<i class="fas fa-angle-down"></i>
                         </button>
                         <div class="dropdown__list">
                             <ul>
@@ -132,6 +144,214 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- card section -->
+
+            <div class="container__grid">
+
+                <div class="performance__card">
+                    <h4 class="performance__card__heading">
+                        Campaign Performace 
+                        <i class="fas fa-user-alt"></i>
+                    </h4>
+
+                    <div class="card__graph">
+                        <h1 class="card__graph__title">
+                            $5.81
+                        </h1>
+                        <small class="card__graph__sub_title">
+                            Average cost per interaction
+                        </small>
+
+                        <div class="card__graph__field">
+
+                            <div class="vertical__measure">
+                                <span>800</span>
+                                <span>700</span>
+                                <span>600</span>
+                                <span>500</span>
+                                <span>400</span>
+                                <span>300</span>
+                                <span>200</span>
+                                <span>100</span>
+                                <span>0</span>
+                            </div>
+
+                            <div class="horizontal__measure">
+                                <span>0</span>
+                                <span>100</span>
+                                <span>200</span>
+                                <span>300</span>
+                                <span>400</span>
+                                <span>500</span>
+                                <span>600</span>
+                                <span>700</span>
+                                <span>800</span>
+                            </div>
+
+                            <div class="values">
+                                <span class="add_camp"></span>
+                                <span class="test_a1"></span>
+                                <span class="test_b2"></span>
+                                <span class="ebook_4"></span>
+                                <span class="figma_5"></span>
+                                <span class="share_26"></span>
+                                <span class="campaign_7"></span>
+                                <span class="test_b"></span>
+                            </div>
+                        </div>
+
+                        <div class="card__graph__color__definition">
+
+                            <div class="define__add_camp">
+                                <span></span>
+                                <p>Add Camp</p>
+                            </div>
+                            <div class="define__test_a1">
+                                <span></span>
+                                <p>Test A1</p>
+                            </div>
+                            <div class="define__test_b2">
+                                <span></span>
+                                <p>Test B2</p>
+                            </div>
+                            <div class="define__ebook_4">
+                                <span></span>
+                                <p>Ebook 4</p>
+                            </div>
+                            <div class="define__figma_5">
+                                <span></span>
+                                <p>Figma 5</p>
+                            </div>
+                            <div class="define__share_26">
+                                <span></span>
+                                <p>Share_26</p>
+                            </div>
+                            <div class="define__campaign_7">
+                                <span></span>
+                                <p>Campaing 7</p>
+                            </div>
+                            <div class="define__test_b">
+                                <span></span>
+                                <p>Test B</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="status__card">
+                    <h4 class="status__card__title">
+                        Prospects by Status 
+                        <i class="fas fa-user-alt"></i>
+                    </h4>
+                    <div class="status__card__graph">
+
+                        <h1 class="graph__titl">
+                            3,078
+                        </h1>
+                        <small class="graph__sub_title">
+                            Total Number of Prospects
+                        </small>
+
+                        <div class="circle__progress">
+                            <!-- --- -->
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rate__card">
+                    <h5 class="rate__card__title">
+                        Open Rate by Day
+                        <i class="fas fa-user-alt"></i>
+                    </h5>
+                    <div class="rate__card__graph">
+                        <h1 class="graph__title">
+                            8,028
+                        </h1>
+                        <small class="graph__sub_title">
+                            Total Number of Recipeents
+                        </small>
+                        <div class="graph__field">
+                            <!-- ---- -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="growth__card">
+                    <h4 class="growth__card__title">
+                        Audience Growth
+                        <i class="fas fa-user-alt"></i>
+                    </h4>
+                    <div class="growth__card__graph">
+                        <h1 class="graph__titile">
+                            4,583
+                        </h1>
+                        <small class="graph__sub_title">
+                            Average Subscriber Growth by Week
+                        </small>
+                        <div class="graph__field">
+                            <div class="graph__values">
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                                <span>Sun</span>
+                            </div>
+
+                            <div class="grpah__measures">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="campaign__card">
+                    <h4 class="campaign__card__title">
+                        Campaign Performance
+                        <i class="fas fa-user-alt"></i>
+                    </h4>
+                    <div class="campaign__value">
+                        <h1>126</h1>
+                        <small>Average cost per interaction</small>
+                    </div>
+                </div>
+
+                <div class="post__card">
+
+                    <h4 class="post__card__title">
+                        Total Facebook Posts
+                        <i class="fas fa-user-alt"></i>
+                    </h4>
+                    <div class="post__card__value">
+                        <h1>88</h1>
+                        <small>Average cost per interaction</small>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="feature">
+                <p class="feature__text">
+                    Customer Support.Blog.API.Android App.iphone App.Terms of Service.Privacy Policy.Data.Processing Addendum
+                </p>
             </div>
         </div>
     </body>
