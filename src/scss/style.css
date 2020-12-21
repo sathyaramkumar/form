@@ -116,7 +116,7 @@ button {
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'performance  performance status growth' 'performance  performance status growth' 'performance  performance rate campaign' 'performance  performance rate post';
-  grid-gap: 15px;
+  grid-gap: 20px;
 }
 
 .performance__card {
@@ -380,6 +380,755 @@ button {
 .performance__card {
   background-color: white;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 15px;
+  width: 700px;
+  position: relative;
+}
+
+.performance__card__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 15px;
+}
+
+.performance__card__heading i {
+  margin-left: auto;
+  color: #848488;
+}
+
+.performance__card .card__graph__title {
+  font-size: 30px;
+}
+
+.performance__card .card__graph__sub_title {
+  font-size: 15px;
+  color: #848488;
+}
+
+.performance__card .card__graph__field {
+  margin: 20px 15px;
+}
+
+.performance__card .card__graph__field .vertical__measure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.performance__card .card__graph__field .vertical__measure span {
+  padding: 20px 0;
+  font-size: 12px;
+  color: #848488;
+  position: relative;
+}
+
+.performance__card .card__graph__field .vertical__measure span:nth-child(1)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 33px;
+  height: 1px;
+  width: 520px;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.performance__card .card__graph__field .vertical__measure span:nth-child(2)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 33px;
+  height: 1px;
+  width: 520px;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.performance__card .card__graph__field .vertical__measure span:nth-child(3)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 33px;
+  height: 1px;
+  width: 520px;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.performance__card .card__graph__field .vertical__measure span:nth-child(4)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 33px;
+  height: 1px;
+  width: 520px;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.performance__card .card__graph__field .vertical__measure span:nth-child(5)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 33px;
+  height: 1px;
+  width: 520px;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.performance__card .card__graph__field .vertical__measure span:nth-child(6)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 33px;
+  height: 1px;
+  width: 520px;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.performance__card .card__graph__field .vertical__measure span:nth-child(7)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 33px;
+  height: 1px;
+  width: 520px;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.performance__card .card__graph__field .vertical__measure span:nth-child(8)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 33px;
+  height: 1px;
+  width: 520px;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.performance__card .card__graph__field .vertical__measure span:last-child {
+  padding-bottom: 0;
+}
+
+.performance__card .card__graph__field .vertical__measure span:last-child::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 29px;
+  left: 33px;
+  height: 1px;
+  width: 520px;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.performance__card .card__graph__field .horizontal__measure {
+  margin-left: 20px;
+}
+
+.performance__card .card__graph__field .horizontal__measure span {
+  padding: 0 20px;
+  font-size: 12px;
+  color: #848488;
+  position: relative;
+}
+
+.performance__card .card__graph__field .horizontal__measure span:first-child {
+  padding-left: 10px;
+}
+
+.performance__card .card__graph__field .horizontal__measure span:first-child::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -481px;
+  left: 13px;
+  height: 467px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.performance__card .card__graph__field .values .value__common {
+  display: block;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: absolute;
+}
+
+.performance__card .card__graph__field .values .add_camp {
+  width: 250px;
+  height: 250px;
+  background-color: #478cf6;
+  top: 300px;
+  left: 75px;
+  z-index: 5;
+}
+
+.performance__card .card__graph__field .values .test_a1 {
+  width: 120px;
+  height: 120px;
+  background-color: #FF8900;
+  top: 450px;
+  left: 270px;
+}
+
+.performance__card .card__graph__field .values .test_b2 {
+  width: 30px;
+  height: 30px;
+  background-color: #A9D9AD;
+  top: 385px;
+  left: 345px;
+}
+
+.performance__card .card__graph__field .values .ebook_4 {
+  width: 50px;
+  height: 50px;
+  background-color: #5D9EC9;
+  top: 570px;
+  left: 490px;
+}
+
+.performance__card .card__graph__field .values .figma_5 {
+  width: 60px;
+  height: 60px;
+  background-color: #FE8FD6;
+  top: 255px;
+  left: 200px;
+}
+
+.performance__card .card__graph__field .values .share_26 {
+  width: 110px;
+  height: 110px;
+  background-color: #fcdf77;
+  top: 160px;
+  left: 350px;
+}
+
+.performance__card .card__graph__field .values .campaign_7 {
+  width: 70px;
+  height: 70px;
+  background-color: #FF423B;
+  top: 125px;
+  left: 530px;
+}
+
+.performance__card .card__graph__field .values .test_b {
+  width: 50px;
+  height: 50px;
+  top: 360px;
+  left: 305px;
+  background-color: #93DAF6;
+  z-index: 10;
+}
+
+.performance__card .card__graph__color__definition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.performance__card .card__graph__color__definition .define__common {
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 167px;
+}
+
+.performance__card .card__graph__color__definition .color__common {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.performance__card .card__graph__color__definition .define__add_camp .color {
+  background-color: #478cf6;
+}
+
+.performance__card .card__graph__color__definition .define__test_a1 .color {
+  background-color: #FF8900;
+}
+
+.performance__card .card__graph__color__definition .define__test_b2 .color {
+  background-color: #A9D9AD;
+}
+
+.performance__card .card__graph__color__definition .define__ebook_4 .color {
+  background-color: #5D9EC9;
+}
+
+.performance__card .card__graph__color__definition .define__figma_5 .color {
+  background-color: #FE8FD6;
+}
+
+.performance__card .card__graph__color__definition .define__share_26 .color {
+  background-color: #fcdf77;
+}
+
+.performance__card .card__graph__color__definition .define__campaign_7 .color {
+  background-color: #FF423B;
+}
+
+.performance__card .card__graph__color__definition .define__test_b .color {
+  background-color: #93DAF6;
+}
+
+.status__card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  width: 280px;
+  position: relative;
+}
+
+.status__card__title {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.status__card__title i {
+  margin-left: auto;
+  color: #848488;
+}
+
+.status__card__graph .graph__title {
+  font-size: 25px;
+}
+
+.status__card__graph .graph__sub_title {
+  font-size: 13px;
+  color: #848488;
+}
+
+.status__card__graph .circular {
+  height: 255px;
+  width: 255px;
+  position: relative;
+}
+
+.status__card__graph .circular .inner {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 10;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.status__card__graph .circular .circle .progress-bar {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background-color: #69CBF2;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.status__card__graph .circular .circle span {
+  position: absolute;
+  top: 110px;
+  left: 90px;
+  z-index: 15;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.status__card .progress-rate {
+  position: absolute;
+  top: 297px;
+  left: 120px;
+}
+
+.status__card .progress-rate span {
+  width: 15px;
+  height: 15px;
+  border: 3px solid white;
+  background-color: #005FF2;
+  display: block;
+  margin: 10px 18px;
+  border-radius: 50%;
+}
+
+.status__card .progress-rate b {
+  background-color: #e4e4ee;
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.growth__card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  width: 280px;
+}
+
+.growth__card__title {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.growth__card__title i {
+  margin-left: auto;
+  color: #848488;
+}
+
+.growth__card__graph .graph__title {
+  font-size: 25px;
+}
+
+.growth__card__graph .graph__sub_title {
+  font-size: 13px;
+  color: #848488;
+}
+
+.growth__card__graph .graph__field .graph__measures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.growth__card__graph .graph__field .graph__measures span {
+  display: block;
+  width: 10px;
+  margin-bottom: 50px;
+  border-radius: 0 0 20px 20px;
+}
+
+.growth__card__graph .graph__field .graph__measures span:first-child {
+  margin-right: 10px;
+  height: 35px;
+  background-color: #69CBF2;
+}
+
+.growth__card__graph .graph__field .graph__measures span:nth-child(2) {
+  height: 120px;
+  background-color: #5768EF;
+}
+
+.growth__card__graph .graph__field .graph__measures span:nth-child(3) {
+  margin-right: 15px;
+  height: 110px;
+  background-color: #69CBF2;
+}
+
+.growth__card__graph .graph__field .graph__measures span:nth-child(4) {
+  height: 100px;
+  background-color: #5768EF;
+}
+
+.growth__card__graph .graph__field .graph__measures span:nth-child(5) {
+  margin-right: 15px;
+  height: 80px;
+  background-color: #69CBF2;
+}
+
+.growth__card__graph .graph__field .graph__measures span:nth-child(6) {
+  height: 130px;
+  background-color: #5768EF;
+}
+
+.growth__card__graph .graph__field .graph__measures span:nth-child(7) {
+  margin-right: 15px;
+  height: 160px;
+  background-color: #69CBF2;
+}
+
+.growth__card__graph .graph__field .graph__measures span:nth-child(8) {
+  height: 130px;
+  background-color: #5768EF;
+}
+
+.growth__card__graph .graph__field .graph__measures span:nth-child(9) {
+  margin-right: 15px;
+  height: 110px;
+  background-color: #69CBF2;
+}
+
+.growth__card__graph .graph__field .graph__measures span:nth-child(10) {
+  height: 90px;
+  background-color: #5768EF;
+}
+
+.growth__card__graph .graph__field .graph__measures span:nth-child(11) {
+  margin-right: 15px;
+  height: 150px;
+  background-color: #69CBF2;
+}
+
+.growth__card__graph .graph__field .graph__measures span:nth-child(12) {
+  height: 170px;
+  background-color: #5768EF;
+}
+
+.growth__card__graph .graph__field .graph__measures span:nth-child(13) {
+  margin-right: 15px;
+  height: 150px;
+  background-color: #69CBF2;
+}
+
+.growth__card__graph .graph__field .graph__measures span:nth-child(14) {
+  height: 170px;
+  background-color: #5768EF;
+}
+
+.growth__card__graph .graph__field .graph__values {
+  position: relative;
+}
+
+.growth__card__graph .graph__field .graph__values span {
+  font-size: 13px;
+  color: #848488;
+  position: absolute;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 20px;
+}
+
+.growth__card__graph .graph__field .graph__values span:nth-child(1) {
+  left: 30px;
+}
+
+.growth__card__graph .graph__field .graph__values span:nth-child(2) {
+  left: 65px;
+}
+
+.growth__card__graph .graph__field .graph__values span:nth-child(3) {
+  left: 100px;
+}
+
+.growth__card__graph .graph__field .graph__values span:nth-child(4) {
+  left: 135px;
+}
+
+.growth__card__graph .graph__field .graph__values span:nth-child(5) {
+  left: 170px;
+}
+
+.growth__card__graph .graph__field .graph__values span:nth-child(6) {
+  left: 205px;
+}
+
+.growth__card__graph .graph__field .graph__values span:nth-child(7) {
+  left: 240px;
+}
+
+.campaign__card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  width: 280px;
+}
+
+.campaign__card__title {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.campaign__card__title i {
+  margin-left: auto;
+  color: #848488;
+}
+
+.campaign__card .campaign__value h1 {
+  font-size: 30px;
+}
+
+.campaign__card .campaign__value small {
+  font-size: 13px;
+  color: #848488;
+}
+
+.post__card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  width: 280px;
+}
+
+.post__card__title {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.post__card__title i {
+  margin-left: auto;
+  color: #848488;
+}
+
+.post__card__value h1 {
+  font-size: 30px;
+}
+
+.post__card__value small {
+  font-size: 13px;
+  color: #848488;
+}
+
+.feature {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.feature__text {
+  font-size: 13px;
+  color: #848488;
+}
+
+.rate__card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  width: 280px;
+}
+
+.rate__card__title {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.rate__card__title i {
+  margin-left: auto;
+  color: #848488;
+}
+
+.rate__card__graph {
+  position: relative;
+}
+
+.rate__card__graph .graph__title {
+  font-size: 25px;
+}
+
+.rate__card__graph .graph__sub_title {
+  font-size: 13px;
+  color: #848488;
+}
+
+.rate__card__graph .graph__field svg {
+  position: absolute;
+  left: 40px;
+  top: 225px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  width: 170px;
+}
+
+.rate__card__graph .graph__field__vertical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rate__card__graph .graph__field__vertical span {
+  padding: 30px 0;
+  font-size: 13px;
+  color: #848488;
+}
+
+.rate__card__graph .graph__field__vertical span:last-child {
+  padding-bottom: 0;
+}
+
+.rate__card__graph .graph__field__vertical span:last-child::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 262px;
+  left: 40px;
+  background-color: rgba(0, 0, 0, 0.192);
+  width: 175px;
+  height: 1px;
+}
+
+.rate__card__graph .graph__field__horizontal span {
+  padding: 0 15px;
+  font-size: 13px;
+  color: #848488;
+  position: relative;
+}
+
+.rate__card__graph .graph__field__horizontal span:first-child {
+  padding-left: 28px;
+}
+
+.rate__card__graph .graph__field__horizontal span:first-child::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -184px;
+  left: 40px;
+  background-color: rgba(0, 0, 0, 0.192);
+  width: 1px;
+  height: 170px;
 }
 /*# sourceMappingURL=style.css.map */

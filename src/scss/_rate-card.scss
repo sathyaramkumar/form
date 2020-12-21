@@ -1,0 +1,75 @@
+.rate__card {
+    background-color: $white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 280px;
+    &__title {
+        font-size: $mediamHeading;
+        @include flex(row);
+        i {
+            margin-left: auto;
+            color: $textMuted;
+        }
+    }
+    &__graph {
+        position: relative;
+        .graph__title {
+            font-size: $largeHeading;
+        }
+        .graph__sub_title {
+            font-size: $mediamText;
+            color: $textMuted;
+        }
+        .graph__field {
+            svg {
+                position: absolute;
+                left: 40px;
+                top: 225px;
+                transform: scaleX(-1);
+                width: 170px;
+            }
+            &__vertical {
+                @include flex(column);
+                span {
+                    padding: 30px 0;
+                    font-size: $mediamText;
+                    color: $textMuted;
+                    &:last-child {
+                        padding-bottom: 0;
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 262px;
+                            left: 40px;
+                            background-color: $graphLine;
+                            width: 175px;
+                            height: 1px;
+                        }
+                    }
+                }
+            }
+            &__horizontal {
+                span {
+                    padding: 0 15px;
+                    font-size: $mediamText;
+                    color: $textMuted;
+                    position: relative;
+                    &:first-child {
+                        padding-left: 28px;
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: -184px;
+                            left: 40px;
+                            background-color: $graphLine;
+                            width: 1px;
+                            height: 170px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

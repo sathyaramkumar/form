@@ -1,40 +1,290 @@
 .performance__card {
     background-color: $white;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 15px;
+    width: 700px;
+    position: relative;
     &__heading {
-        i {}
+        @include flex(row);
+        font-size: $mediamHeading;
+        i {
+            margin-left: auto;
+            color: $textMuted;
+        }
     }
     .card__graph {
-        &__title {}
-        &__sub_title {}
+        &__title {
+            font-size: $extraLargeHeading;
+        }
+        &__sub_title {
+            font-size: $mediamHeading;
+            color: $textMuted;
+        }
         &__field {
+            margin: 20px 15px;
             .vertical__measure {
-                span {}
+                
+                @include flex(column);
+                span {
+                    padding: 20px 0;
+                    font-size: $smallHeading;
+                    color: $textMuted;
+                    position: relative;
+                    &:nth-child(1) {
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 30px;
+                            left: 33px;
+                            height: 1px;
+                            width: 520px;
+                            background-color: $graphLine;
+                        }
+                    }
+                    &:nth-child(2) {
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 30px;
+                            left: 33px;
+                            height: 1px;
+                            width: 520px;
+                            background-color: $graphLine;
+                        }
+                    }
+                    &:nth-child(3) {
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 30px;
+                            left: 33px;
+                            height: 1px;
+                            width: 520px;
+                            background-color: $graphLine;
+                        }
+                    }
+                    &:nth-child(4) {
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 30px;
+                            left: 33px;
+                            height: 1px;
+                            width: 520px;
+                            background-color: $graphLine;
+                        }
+                    }
+                    &:nth-child(5) {
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 30px;
+                            left: 33px;
+                            height: 1px;
+                            width: 520px;
+                            background-color: $graphLine;
+                        }
+                    }
+                    &:nth-child(6) {
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 30px;
+                            left: 33px;
+                            height: 1px;
+                            width: 520px;
+                            background-color: $graphLine;
+                        }
+                    }
+                    &:nth-child(7) {
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 30px;
+                            left: 33px;
+                            height: 1px;
+                            width: 520px;
+                            background-color: $graphLine;
+                        }
+                    }
+                    &:nth-child(8) {
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 30px;
+                            left: 33px;
+                            height: 1px;
+                            width: 520px;
+                            background-color: $graphLine;
+                        }
+                    }
+                    &:last-child {
+                        padding-bottom: 0;
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 29px;
+                            left: 33px;
+                            height: 1px;
+                            width: 520px;
+                            background-color: $graphLine;
+                        }
+                    }
+                }
             }
             .horizontal__measure {
-                span {}
+                margin-left: 20px;
+                span {
+                    padding: 0 20px;
+                    font-size: $smallHeading;
+                    color: $textMuted;
+                    position: relative;
+                    &:first-child {
+                        padding-left: 10px;
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: -481px;
+                            left: 13px;
+                            height: 467px;
+                            width: 1px;
+                            background-color: $graphLine;
+                        }
+                    }
+                }
             }
             .values {
-                .add_camp {}
-                .test_a1 {}
-                .test_be {}
-                .ebook_4 {}
-                .figma_5 {}
-                .share_26 {}
-                .campaign_7 {}
-                .test_b {}
+                .value__common {
+                    display: block;
+                    border-radius: 50%;
+                    border: 5px solid $white;
+                    position: absolute;
+                }
+                .add_camp {
+                    width: 250px;
+                    height: 250px;
+                    background-color: $blue;
+                    top: 300px;
+                    left: 75px;
+                    z-index: 5;
+                }
+                .test_a1 {
+                    width: 120px;
+                    height: 120px;
+                    background-color: $orange;
+                    top: 450px;
+                    left: 270px;                
+                }
+                .test_b2 {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $liteGreen;
+                    top: 385px;
+                    left: 345px;
+                }
+                .ebook_4 {
+                    width: 50px;
+                    height: 50px;
+                    background-color: $darkSkyBlue;
+                    top: 570px;
+                    left: 490px;
+                }
+                .figma_5 {
+                    width: 60px;
+                    height: 60px;
+                    background-color: $pink;
+                    top: 255px;
+                    left: 200px;
+                }
+                .share_26 {
+                    width: 110px;
+                    height: 110px;
+                    background-color: $yellow;
+                    top: 160px;
+                    left: 350px;
+                }
+                .campaign_7 {
+                    width: 70px;
+                    height: 70px;
+                    background-color: $red;
+                    top: 125px;
+                    left: 530px;
+                }
+                .test_b {
+                    width: 50px;
+                    height: 50px;
+                    top: 360px;
+                    left: 305px;
+                    background-color: $skyBlue;
+                    z-index: 10;
+                }
             }
         }
         &__color__definition {
-            .define__add_camp {}
-            .define__test_a1 {}
-            .define__test_b2 {}
-            .define__ebook_4 {}
-            .define__figma_5 {}
-            .define__share_26 {}
-            .define__campaign_7 {}
-            .define__test_b {}
+            @include flex (row);
+            flex-wrap: wrap;
+            .define__common {
+                padding: 10px 20px;
+                @include flex(row);
+                width: 167px;
+            }
+            .color__common {
+                display: block;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+            .define__add_camp {
+                .color {
+                    background-color: $blue;
+                }
+            }
+            .define__test_a1 {
+                .color {
+                    background-color: $orange;
+                }
+            }
+            .define__test_b2 {
+                .color {
+                    background-color: $liteGreen;
+                }
+            }
+            .define__ebook_4 {
+                .color {
+                    background-color: $darkSkyBlue;
+                }
+            }
+            .define__figma_5 {
+                .color {
+                    background-color: $pink;
+                }
+            }
+            .define__share_26 {
+                .color {
+                    background-color: $yellow;
+                }
+            }
+            .define__campaign_7 {
+                .color {
+                    background-color: $red;
+                }
+            }
+            .define__test_b {
+                .color {
+                    background-color: $skyBlue;
+                }
+            }
         }
     }
 }

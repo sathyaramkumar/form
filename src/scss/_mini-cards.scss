@@ -1,0 +1,56 @@
+.campaign__card {
+    background-color: $white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 280px;
+    &__title {
+        font-size: $mediamHeading;
+        @include flex(row);
+        i {
+            margin-left: auto;
+            color: $textMuted;
+        }
+    }
+    .campaign__value {
+        h1 {
+            font-size: $extraLargeHeading;
+        }
+        small {
+            font-size: $mediamText;
+            color: $textMuted;
+        }
+    }
+}
+
+.post__card {
+    background-color: $white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 280px;
+    &__title {
+        font-size: $mediamHeading;
+        @include flex(row);
+        i {
+            margin-left: auto;
+            color: $textMuted;
+        }
+    }
+    &__value {
+        h1 {
+            font-size: $extraLargeHeading;
+        }
+        small {
+            font-size: $mediamText;
+            color: $textMuted;
+        }
+    }
+}
+
+.feature {
+    text-align: center;
+    margin: 40px 0;
+    &__text {
+        font-size: $mediamText;
+        color: $textMuted;
+    }
+}

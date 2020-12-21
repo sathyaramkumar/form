@@ -1,0 +1,130 @@
+.growth__card {
+    background-color: $white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 280px;
+    &__title {
+        font-size: $mediamHeading;
+        @include flex(row);
+        i {
+            margin-left: auto;
+            color: $textMuted;
+        }
+    }
+    &__graph {
+        .graph__title {
+            font-size: $largeHeading;
+        }
+        .graph__sub_title {
+            font-size: $mediamText;
+            color: $textMuted;
+        }
+        .graph__field {
+            .graph__measures {
+                @include flex (row-reverse);
+                transform: rotate(180deg);
+                span {    
+                    display: block;
+                    width: 10px;
+                    margin-bottom: 50px;   
+                    border-radius: 0 0 20px 20px;
+                    &:first-child {
+                        margin-right: 10px;
+                        height: 35px;
+                        background-color: $thickSkyBlue;
+                    }
+                    &:nth-child(2) {
+                        height: 120px;
+                        background-color: $darkBlue;
+                    }
+                    &:nth-child(3) {
+                        margin-right: 15px;
+                        height: 110px;
+                        background-color: $thickSkyBlue;
+                    }
+                    &:nth-child(4) {
+                        height: 100px;
+                        background-color: $darkBlue;
+                    }
+                    &:nth-child(5) {
+                        margin-right: 15px;
+                        height: 80px;
+                        background-color: $thickSkyBlue;
+                    }
+                    &:nth-child(6) {
+                        height: 130px;
+                        background-color: $darkBlue;
+                    }
+                    &:nth-child(7) {
+                        margin-right: 15px;
+                        height: 160px;
+                        background-color: $thickSkyBlue;
+                    }
+                    &:nth-child(8) {
+                        height: 130px;
+                        background-color: $darkBlue;
+                    }
+                    &:nth-child(9) {
+                        margin-right: 15px;
+                        height: 110px;
+                        background-color: $thickSkyBlue;
+                    }
+                    &:nth-child(10) {
+                        height: 90px;
+                        background-color: $darkBlue;
+                    }
+                    &:nth-child(11) {
+                        margin-right: 15px;
+                        height: 150px;
+                        background-color: $thickSkyBlue;
+                    }
+                    &:nth-child(12) {
+                        height: 170px;
+                        background-color: $darkBlue;
+                    }
+                    &:nth-child(13) {
+                        margin-right: 15px;
+                        height: 150px;
+                        background-color: $thickSkyBlue;
+                    }
+                    &:nth-child(14) {
+                        height: 170px;
+                        background-color: $darkBlue;
+                    }
+                }
+            }
+            .graph__values {
+                position: relative;
+                span {
+                    font-size: $mediamText;
+                    color: $textMuted;
+                    position: absolute;
+                    transform-origin: 0 0;
+                    transform: rotate(90deg);
+                    top: 20px;
+                    &:nth-child(1) {
+                        left: 30px;
+                    }
+                    &:nth-child(2) {
+                        left: 65px;
+                    }
+                    &:nth-child(3) {
+                        left: 100px;
+                    }
+                    &:nth-child(4) {
+                        left: 135px;
+                    }
+                    &:nth-child(5) {
+                        left: 170px;
+                    }
+                    &:nth-child(6) {
+                        left: 205px;
+                    }
+                    &:nth-child(7) {
+                        left: 240px;
+                    }
+                }
+            }
+        }
+    }
+}
