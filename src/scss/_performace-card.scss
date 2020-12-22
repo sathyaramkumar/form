@@ -289,6 +289,215 @@
     }
 }
 
+// tablet view 
+@media (max-width: 1000px) {
+
+    .performance__card {
+        width: 90vw;
+        .card__graph {
+            &__field {
+                .vertical__measure {
+                    
+                    span {
+                        &:nth-child(1) {
+                            &::before {
+                                width: 75vw;
+                            }
+                        }
+                        &:nth-child(2) {
+                            &::before {
+                                width: 75vw;
+                            }
+                        }
+                        &:nth-child(3) {
+                            &::before {
+                                width: 75vw;
+                            }
+                        }
+                        &:nth-child(4) {
+                            &::before {
+                                width: 75vw;
+                            }
+                        }
+                        &:nth-child(5) {
+                            &::before {
+                                width: 75vw;
+                            }
+                        }
+                        &:nth-child(6) {
+                            &::before {
+                                width: 75vw;
+                            }
+                        }
+                        &:nth-child(7) {
+                            &::before {
+                                width: 75vw;
+                            }
+                        }
+                        &:nth-child(8) {
+                            &::before {
+                                width: 75vw;
+                            }
+                        }
+                        &:last-child {
+                            padding-bottom: 0;
+                            &::before {
+                                width: 75vw;
+                            }
+                        }
+                    }
+                }
+                .horizontal__measure {
+                    margin-left: 20px;
+                    width: 75vw;
+                    @include flex-jc-ai (row , space-between , center);
+                    span {
+                        padding: 0 10px;
+                        font-size: $smallHeading;
+                        color: $textMuted;
+                        position: relative;
+                        
+                        &:first-child {
+                            padding-left: 10px;
+                            &::before {
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                top: -475px;
+                                left: 13px;
+                                height: 467px;
+                                width: 1px;
+                                background-color: $graphLine;
+                            }
+                        }
+                    }
+                }
+                .values {
+                    .value__common {
+                        display: block;
+                        border-radius: 50%;
+                        border: 5px solid $white;
+                        position: absolute;
+                    }
+                    .add_camp {
+                        width: 250px;
+                        height: 250px;
+                        background-color: $blue;
+                        top: 300px;
+                        left: 90px;
+                        z-index: 5;
+                    }
+                    .test_a1 {
+                        width: 120px;
+                        height: 120px;
+                        background-color: $orange;
+                        top: 450px;
+                        left: 290px;                
+                    }
+                    .test_b2 {
+                        width: 30px;
+                        height: 30px;
+                        background-color: $liteGreen;
+                        top: 385px;
+                        left: 345px;
+                    }
+                    .ebook_4 {
+                        width: 50px;
+                        height: 50px;
+                        background-color: $darkSkyBlue;
+                        top: 570px;
+                        left: 80%;
+                    }
+                    .figma_5 {
+                        width: 60px;
+                        height: 60px;
+                        background-color: $pink;
+                        top: 255px;
+                        left: 200px;
+                    }
+                    .share_26 {
+                        width: 110px;
+                        height: 110px;
+                        background-color: $yellow;
+                        top: 160px;
+                        left: 50%;
+                    }
+                    .campaign_7 {
+                        width: 70px;
+                        height: 70px;
+                        background-color: $red;
+                        top: 125px;
+                        left: 80%;
+                    }
+                    .test_b {
+                        width: 50px;
+                        height: 50px;
+                        top: 360px;
+                        left: 305px;
+                        background-color: $skyBlue;
+                        z-index: 10;
+                    }
+                }
+            }
+            &__color__definition {
+                @include flex (row);
+                flex-wrap: wrap;
+                .define__common {
+                    padding: 10px 20px;
+                    @include flex(row);
+                    width: 160px;
+                }
+                .color__common {
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+                .define__add_camp {
+                    .color {
+                        background-color: $blue;
+                    }
+                }
+                .define__test_a1 {
+                    .color {
+                        background-color: $orange;
+                    }
+                }
+                .define__test_b2 {
+                    .color {
+                        background-color: $liteGreen;
+                    }
+                }
+                .define__ebook_4 {
+                    .color {
+                        background-color: $darkSkyBlue;
+                    }
+                }
+                .define__figma_5 {
+                    .color {
+                        background-color: $pink;
+                    }
+                }
+                .define__share_26 {
+                    .color {
+                        background-color: $yellow;
+                    }
+                }
+                .define__campaign_7 {
+                    .color {
+                        background-color: $red;
+                    }
+                }
+                .define__test_b {
+                    .color {
+                        background-color: $skyBlue;
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 560px) {
     .performance__card {
         width: 95vw;

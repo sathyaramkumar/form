@@ -129,6 +129,36 @@
     }
 }
 
+// tablet view 
+@media (max-width: 1000px) {
+    .growth__card {
+        padding: 15px 0 0 0;
+        width: 44vw;
+        height: 400px;
+        &__title {
+            margin: 0 15px;
+        }
+        &__graph {
+            .graph__title {
+                margin-left: 15px;
+            }
+            .graph__sub_title {
+                margin: 0 15px;
+                font-size: 12px;
+            }
+            .graph__field {
+                width: 250px;
+                margin: auto;
+                .graph__measures {
+                    span {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // mobile view 
 @media (max-width: 560px) {
     .growth__card {

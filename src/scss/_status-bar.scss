@@ -81,7 +81,23 @@
         }
     }
 }
+// tablet view 
 
+@media (max-width: 1000px) {
+    .status__bar {
+        display: block;
+        &__profile {
+            margin: 20px 0;
+            @include flex-jc-ai (row , start ,center);
+
+        }
+        &__btn__group {
+            .dropdown {
+                margin-left: auto;
+            }
+        }
+    }
+}
 // mobile view 
 
 @media (max-width: 560px) {

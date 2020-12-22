@@ -74,6 +74,54 @@
     }
 }
 
+// tablet view
+
+@media (max-width: 1000px) {
+    .rate__card {
+        width: 44vw;
+        height: 380px;
+        &__graph {
+            .graph__field {
+                margin-left: 20px;
+                svg {
+                    position: absolute;
+                    left: 60px;
+                    top: 232px;
+                    width: 180px;
+                }
+                &__vertical {
+                    @include flex(column);
+                    span {
+                        &:last-child {
+                            &::before {
+                                top: 272px;
+                                left: 60px;
+                                width: 180px;
+                                height: 1px;
+                            }
+                        }
+                    }
+                }
+                &__horizontal {
+                    @include flex-jc-ai(row , space-between , center);
+                    width: 180px;
+                    span {
+                        padding: 20px 0;
+                        &:first-child {
+                            &::before {
+                                top: -180px;
+                                left: 40px;
+                                width: 1px;
+                                height: 180px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 //mobile view 
 @media (max-width: 560px) {
     .rate__card {

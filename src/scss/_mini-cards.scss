@@ -22,6 +22,14 @@
     }
 }
 
+// tablet view 
+
+@media (max-width: 1000px) {
+    .campaign__card {
+        width: 44vw;
+    }
+}
+
 // mobile view 
 @media (max-width: 560px) {
     .campaign__card {
@@ -51,6 +59,14 @@
             font-size: $mediamText;
             color: $textMuted;
         }
+    }
+}
+
+// tablet view 
+
+@media (max-width: 1000px) {
+    .post__card {
+        width: 44vw;
     }
 }
 

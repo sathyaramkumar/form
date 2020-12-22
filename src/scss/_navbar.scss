@@ -132,6 +132,257 @@
     }
 }
 
+// tablet view 
+
+@media (max-width: 1000px) {
+    .navbar {
+        position: relative;
+        label {
+            display: block;
+            position: absolute;
+            right: 20px;
+            i {
+                text-align: center;
+                padding: 8px 10px;
+                font-size: 20px;
+                color: $white;
+                background-color: $black;
+                border-radius: 50%;
+            }
+        }
+
+        .toggler__btn {
+            display: none;
+        }
+
+        .toggler__btn:checked ~ .container__side {
+            visibility: visible;
+        }
+
+
+        .container__side {
+            visibility: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            border-radius: 0 40px 40px 0;
+            background-color: #478df623;
+            @include flex (column);
+            height: 100vh;
+            z-index: 20;
+
+            .navbar__brand {
+                margin: 20px 5px;
+                width: 200px;
+                .navbar__brand__link {
+                    color: $black;
+                    background-color: $white;
+                    border-radius: 50px;
+                    padding: 5px 10px;
+                    i {
+                        background-color: $white;
+                        color: $blue;
+                    }
+                }
+            }
+
+            .navbar__list {
+                margin-top: 30px;
+                background-color: transparent;
+                .navbar__nav {
+                    @include flex (column);
+                    .navbar__item {
+                        background-color: $white;
+                        padding: 10px 0 10px 60px;
+                        margin: 20px 0 20px 20px;
+                        border-radius: 50px;
+                        width: 170px;
+                        margin-right: auto;
+                        position: relative;
+                        &:first-child {
+                            .navbar__link {
+                                &::before {
+                                    content: "\f015";
+                                    font-family: "Font Awesome 5 Free";
+                                    display: block;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    color: $blue;
+                                    left: 25px;
+                                    top: 10px;
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            .navbar__link {
+                                &::before {
+                                    content: "\f406";
+                                    font-family: "Font Awesome 5 Free";
+                                    display: block;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    color: $blue;
+                                    left: 25px;
+                                    top: 10px;
+                                }
+                            }
+                        }
+                        &:nth-child(3) {
+                            .navbar__link {
+                                &::before {
+                                    content: "\f0ca";
+                                    font-family: "Font Awesome 5 Free";
+                                    display: block;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    color: $blue;
+                                    left: 25px;
+                                    top: 10px;
+                                }
+                            }
+                        }
+                        &:nth-child(4) {
+                            .navbar__link {
+                                &::before {
+                                    content: "\f0e0";
+                                    font-family: "Font Awesome 5 Free";
+                                    display: block;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    color: $blue;
+                                    left: 25px;
+                                    top: 10px;
+                                }
+                            }
+                        }
+                        &:nth-child(5) {
+                            .navbar__link {
+                                &::before {
+                                    content: "\f3c5";
+                                    font-family: "Font Awesome 5 Free";
+                                    display: block;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    color: $blue;
+                                    left: 25px;
+                                    top: 10px;
+                                }
+                            }
+                        }
+                        &:nth-child(6) {
+                            .navbar__link {
+                                &::before {
+                                    content: "\f15b";
+                                    font-family: "Font Awesome 5 Free";
+                                    display: block;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    color: $blue;
+                                    left: 25px;
+                                    top: 10px;
+                                }
+                            }
+                        }
+                        .navbar__link {
+                            color: $black;
+                            
+                            
+                            padding: 5px 10px;
+                            &:hover {
+                                color: $liteOrange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        &__notification {
+            @include flex (row-reverse);
+            margin: 0;
+
+            &__dropdown {
+                .notification__link {
+                    display: block;
+                    padding: 8px 15px;
+                    color: $textMuted;
+                    &:hover {
+                        color: $black;
+                    }
+                }
+                .notification__dropdown {
+                    background-color: $whiteSmoke;
+                    padding: 5px 0;
+                    border-radius: 5px;
+                    width: 160px;
+                    position: absolute;
+                    top: 60px;
+                    left: 70px;
+                    display: none;
+                    .dropdown__list {   
+                        position: relative;             
+                        .dropdown__item {
+                            padding: 10px 15px;
+                            font-size: $mediamText;
+                            border-bottom: 1px solid $thickBackground;
+                            &:first-child {
+                                &::before {
+                                    content: '';
+                                    width: 0;
+                                    height: 0;
+                                    border-bottom: 15px solid $whiteSmoke;
+                                    border-left: 10px solid transparent;
+                                    border-right: 10px solid transparent;
+                                    border-top: 0;
+                                    position: absolute;
+                                    top: -18px;
+                                    left: 30px;
+                                }
+                            }
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                            &:hover {
+                                background-color: $white;
+                            }
+                            i {
+                                color: $red;
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar__avator {
+                background-color: $background;
+                padding: 5px 0;
+                border-radius: 50px;
+                &__img {
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 10px;
+                }
+                .avator__title {
+                    display: none;
+                    &__name {
+                        font-size: $mediamText;
+                    }
+                    &__user__name {
+                        display: block;
+                        font-size: $smallText;
+                        margin-bottom: 30px;
+                    }
+                }
+                &__link {
+                    color: $textMuted;
+                    padding: 5px 10px 5px 5px;
+                }
+            }
+        }
+    }
+}
+
 // mobile view 
 
 @media (max-width: 560px) {

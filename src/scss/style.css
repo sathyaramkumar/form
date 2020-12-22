@@ -83,6 +83,13 @@ button {
   margin: auto;
 }
 
+@media (max-width: 1000px) {
+  .container {
+    width: 90vw;
+    margin: auto;
+  }
+}
+
 @media (max-width: 560px) {
   .container {
     width: 95vw;
@@ -172,6 +179,50 @@ button {
   -ms-grid-row: 4;
   -ms-grid-column: 4;
   grid-area: post;
+}
+
+@media (max-width: 1000px) {
+  .container__grid {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'performance  performance' 'performance  performance' 'status growth' 'status growth' 'rate campaign' 'rate post';
+    grid-gap: 20px;
+  }
+  .performance__card {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: performance;
+  }
+  .status__card {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: status;
+  }
+  .rate__card {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: rate;
+  }
+  .growth__card {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: growth;
+  }
+  .campaign__card {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    grid-area: campaign;
+  }
+  .post__card {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+    grid-area: post;
+  }
 }
 
 @media (max-width: 560px) {
@@ -334,6 +385,234 @@ button {
 .navbar__notification .navbar__avator__link {
   color: black;
   padding: 10px 20px;
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    position: relative;
+  }
+  .navbar label {
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
+  .navbar label i {
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+  }
+  .navbar .toggler__btn {
+    display: none;
+  }
+  .navbar .toggler__btn:checked ~ .container__side {
+    visibility: visible;
+  }
+  .navbar .container__side {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 0 40px 40px 0;
+    background-color: #478df623;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+    z-index: 20;
+  }
+  .navbar .container__side .navbar__brand {
+    margin: 20px 5px;
+    width: 200px;
+  }
+  .navbar .container__side .navbar__brand .navbar__brand__link {
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px 10px;
+  }
+  .navbar .container__side .navbar__brand .navbar__brand__link i {
+    background-color: white;
+    color: #478cf6;
+  }
+  .navbar .container__side .navbar__list {
+    margin-top: 30px;
+    background-color: transparent;
+  }
+  .navbar .container__side .navbar__list .navbar__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item {
+    background-color: white;
+    padding: 10px 0 10px 60px;
+    margin: 20px 0 20px 20px;
+    border-radius: 50px;
+    width: 170px;
+    margin-right: auto;
+    position: relative;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item:first-child .navbar__link::before {
+    content: "\f015";
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    color: #478cf6;
+    left: 25px;
+    top: 10px;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item:nth-child(2) .navbar__link::before {
+    content: "\f406";
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    color: #478cf6;
+    left: 25px;
+    top: 10px;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item:nth-child(3) .navbar__link::before {
+    content: "\f0ca";
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    color: #478cf6;
+    left: 25px;
+    top: 10px;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item:nth-child(4) .navbar__link::before {
+    content: "\f0e0";
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    color: #478cf6;
+    left: 25px;
+    top: 10px;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item:nth-child(5) .navbar__link::before {
+    content: "\f3c5";
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    color: #478cf6;
+    left: 25px;
+    top: 10px;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item:nth-child(6) .navbar__link::before {
+    content: "\f15b";
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    color: #478cf6;
+    left: 25px;
+    top: 10px;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item .navbar__link {
+    color: black;
+    padding: 5px 10px;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item .navbar__link:hover {
+    color: #FEB35C;
+  }
+  .navbar__notification {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin: 0;
+  }
+  .navbar__notification__dropdown .notification__link {
+    display: block;
+    padding: 8px 15px;
+    color: #848488;
+  }
+  .navbar__notification__dropdown .notification__link:hover {
+    color: black;
+  }
+  .navbar__notification__dropdown .notification__dropdown {
+    background-color: whitesmoke;
+    padding: 5px 0;
+    border-radius: 5px;
+    width: 160px;
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    display: none;
+  }
+  .navbar__notification__dropdown .notification__dropdown .dropdown__list {
+    position: relative;
+  }
+  .navbar__notification__dropdown .notification__dropdown .dropdown__list .dropdown__item {
+    padding: 10px 15px;
+    font-size: 13px;
+    border-bottom: 1px solid #e4e4ee;
+  }
+  .navbar__notification__dropdown .notification__dropdown .dropdown__list .dropdown__item:first-child::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid whitesmoke;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 0;
+    position: absolute;
+    top: -18px;
+    left: 30px;
+  }
+  .navbar__notification__dropdown .notification__dropdown .dropdown__list .dropdown__item:last-child {
+    border-bottom: none;
+  }
+  .navbar__notification__dropdown .notification__dropdown .dropdown__list .dropdown__item:hover {
+    background-color: white;
+  }
+  .navbar__notification__dropdown .notification__dropdown .dropdown__list .dropdown__item i {
+    color: #FF423B;
+  }
+  .navbar__notification .navbar__avator {
+    background-color: #f5f5fb;
+    padding: 5px 0;
+    border-radius: 50px;
+  }
+  .navbar__notification .navbar__avator__img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+  }
+  .navbar__notification .navbar__avator .avator__title {
+    display: none;
+  }
+  .navbar__notification .navbar__avator .avator__title__name {
+    font-size: 13px;
+  }
+  .navbar__notification .navbar__avator .avator__title__user__name {
+    display: block;
+    font-size: 10px;
+    margin-bottom: 30px;
+  }
+  .navbar__notification .navbar__avator__link {
+    color: #848488;
+    padding: 5px 10px 5px 5px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -629,6 +908,31 @@ button {
 
 .status__bar__btn__group .dropdown__list .dropdown__item .dropdown__link:hover {
   background-color: #e4e4ee;
+}
+
+@media (max-width: 1000px) {
+  .status__bar {
+    display: block;
+  }
+  .status__bar__profile {
+    margin: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .status__bar__btn__group .dropdown {
+    margin-left: auto;
+  }
 }
 
 @media (max-width: 560px) {
@@ -1005,6 +1309,195 @@ button {
   background-color: #93DAF6;
 }
 
+@media (max-width: 1000px) {
+  .performance__card {
+    width: 90vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(1)::before {
+    width: 75vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(2)::before {
+    width: 75vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(3)::before {
+    width: 75vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(4)::before {
+    width: 75vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(5)::before {
+    width: 75vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(6)::before {
+    width: 75vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(7)::before {
+    width: 75vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(8)::before {
+    width: 75vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:last-child {
+    padding-bottom: 0;
+  }
+  .performance__card .card__graph__field .vertical__measure span:last-child::before {
+    width: 75vw;
+  }
+  .performance__card .card__graph__field .horizontal__measure {
+    margin-left: 20px;
+    width: 75vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .performance__card .card__graph__field .horizontal__measure span {
+    padding: 0 10px;
+    font-size: 12px;
+    color: #848488;
+    position: relative;
+  }
+  .performance__card .card__graph__field .horizontal__measure span:first-child {
+    padding-left: 10px;
+  }
+  .performance__card .card__graph__field .horizontal__measure span:first-child::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -475px;
+    left: 13px;
+    height: 467px;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.192);
+  }
+  .performance__card .card__graph__field .values .value__common {
+    display: block;
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+  }
+  .performance__card .card__graph__field .values .add_camp {
+    width: 250px;
+    height: 250px;
+    background-color: #478cf6;
+    top: 300px;
+    left: 90px;
+    z-index: 5;
+  }
+  .performance__card .card__graph__field .values .test_a1 {
+    width: 120px;
+    height: 120px;
+    background-color: #FF8900;
+    top: 450px;
+    left: 290px;
+  }
+  .performance__card .card__graph__field .values .test_b2 {
+    width: 30px;
+    height: 30px;
+    background-color: #A9D9AD;
+    top: 385px;
+    left: 345px;
+  }
+  .performance__card .card__graph__field .values .ebook_4 {
+    width: 50px;
+    height: 50px;
+    background-color: #5D9EC9;
+    top: 570px;
+    left: 80%;
+  }
+  .performance__card .card__graph__field .values .figma_5 {
+    width: 60px;
+    height: 60px;
+    background-color: #FE8FD6;
+    top: 255px;
+    left: 200px;
+  }
+  .performance__card .card__graph__field .values .share_26 {
+    width: 110px;
+    height: 110px;
+    background-color: #fcdf77;
+    top: 160px;
+    left: 50%;
+  }
+  .performance__card .card__graph__field .values .campaign_7 {
+    width: 70px;
+    height: 70px;
+    background-color: #FF423B;
+    top: 125px;
+    left: 80%;
+  }
+  .performance__card .card__graph__field .values .test_b {
+    width: 50px;
+    height: 50px;
+    top: 360px;
+    left: 305px;
+    background-color: #93DAF6;
+    z-index: 10;
+  }
+  .performance__card .card__graph__color__definition {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .performance__card .card__graph__color__definition .define__common {
+    padding: 10px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 160px;
+  }
+  .performance__card .card__graph__color__definition .color__common {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .performance__card .card__graph__color__definition .define__add_camp .color {
+    background-color: #478cf6;
+  }
+  .performance__card .card__graph__color__definition .define__test_a1 .color {
+    background-color: #FF8900;
+  }
+  .performance__card .card__graph__color__definition .define__test_b2 .color {
+    background-color: #A9D9AD;
+  }
+  .performance__card .card__graph__color__definition .define__ebook_4 .color {
+    background-color: #5D9EC9;
+  }
+  .performance__card .card__graph__color__definition .define__figma_5 .color {
+    background-color: #FE8FD6;
+  }
+  .performance__card .card__graph__color__definition .define__share_26 .color {
+    background-color: #fcdf77;
+  }
+  .performance__card .card__graph__color__definition .define__campaign_7 .color {
+    background-color: #FF423B;
+  }
+  .performance__card .card__graph__color__definition .define__test_b .color {
+    background-color: #93DAF6;
+  }
+}
+
 @media (max-width: 560px) {
   .performance__card {
     width: 95vw;
@@ -1260,6 +1753,24 @@ button {
   border-radius: 10px;
 }
 
+@media (max-width: 1000px) {
+  .status__card {
+    width: 44vw;
+    height: 400px;
+  }
+  .status__card__graph .circular {
+    height: 255px;
+    width: 255px;
+    margin: auto;
+  }
+  .status__card .progress-rate {
+    position: absolute;
+    top: 297px;
+    left: 40%;
+    right: 40%;
+  }
+}
+
 @media (max-width: 560px) {
   .status__card {
     margin-top: 20px;
@@ -1450,6 +1961,31 @@ button {
   left: 240px;
 }
 
+@media (max-width: 1000px) {
+  .growth__card {
+    padding: 15px 0 0 0;
+    width: 44vw;
+    height: 400px;
+  }
+  .growth__card__title {
+    margin: 0 15px;
+  }
+  .growth__card__graph .graph__title {
+    margin-left: 15px;
+  }
+  .growth__card__graph .graph__sub_title {
+    margin: 0 15px;
+    font-size: 12px;
+  }
+  .growth__card__graph .graph__field {
+    width: 250px;
+    margin: auto;
+  }
+  .growth__card__graph .graph__field .graph__measures span {
+    margin-bottom: 10px;
+  }
+}
+
 @media (max-width: 560px) {
   .growth__card {
     margin-top: 20px;
@@ -1494,6 +2030,12 @@ button {
   color: #848488;
 }
 
+@media (max-width: 1000px) {
+  .campaign__card {
+    width: 44vw;
+  }
+}
+
 @media (max-width: 560px) {
   .campaign__card {
     margin-top: 20px;
@@ -1531,6 +2073,12 @@ button {
 .post__card__value small {
   font-size: 13px;
   color: #848488;
+}
+
+@media (max-width: 1000px) {
+  .post__card {
+    width: 44vw;
+  }
 }
 
 @media (max-width: 560px) {
@@ -1652,6 +2200,62 @@ button {
   background-color: rgba(0, 0, 0, 0.192);
   width: 1px;
   height: 170px;
+}
+
+@media (max-width: 1000px) {
+  .rate__card {
+    width: 44vw;
+    height: 380px;
+  }
+  .rate__card__graph .graph__field {
+    margin-left: 20px;
+  }
+  .rate__card__graph .graph__field svg {
+    position: absolute;
+    left: 60px;
+    top: 232px;
+    width: 180px;
+  }
+  .rate__card__graph .graph__field__vertical {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .rate__card__graph .graph__field__vertical span:last-child::before {
+    top: 272px;
+    left: 60px;
+    width: 180px;
+    height: 1px;
+  }
+  .rate__card__graph .graph__field__horizontal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 180px;
+  }
+  .rate__card__graph .graph__field__horizontal span {
+    padding: 20px 0;
+  }
+  .rate__card__graph .graph__field__horizontal span:first-child::before {
+    top: -180px;
+    left: 40px;
+    width: 1px;
+    height: 180px;
+  }
 }
 
 @media (max-width: 560px) {

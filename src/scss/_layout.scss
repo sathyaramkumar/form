@@ -11,12 +11,25 @@
         @include flex (row);
     }
 }
+// ****
+
+
+
 
 //container 
 .container {
     width: 1300px;
     margin: auto;
 }
+
+// tablet view 
+@media (max-width: 1000px) {
+    .container {
+        width: 90vw;
+        margin: auto;
+    }
+}
+
 // mobile view
 @media (max-width: 560px) {
     .container {
@@ -24,6 +37,9 @@
         margin: auto;
     }
 }
+// ****
+
+
 
 // status bar 
 .status__bar {
@@ -35,6 +51,9 @@
         @include flex (row);
     }
 }
+// ****
+
+
 
 // card layout
 .container__grid {
@@ -71,9 +90,49 @@
     grid-area: post;
 }
 
+
+// tablet view 
+@media (max-width: 1000px) {
+    .container__grid {
+        display: grid;
+        grid-template-areas: 
+        'performance  performance'
+        'performance  performance'
+        'status growth'
+        'status growth'
+        'rate campaign'
+        'rate post';
+        grid-gap: 20px;
+    }
+    
+    .performance__card {
+        grid-area: performance;
+    }
+    
+    .status__card {
+        grid-area: status;
+    }
+    
+    .rate__card {
+        grid-area: rate;
+    }
+    
+    .growth__card {
+        grid-area: growth;
+    }
+    
+    .campaign__card {
+        grid-area: campaign;
+    }
+    
+    .post__card {
+        grid-area: post;
+    }
+}
 //mobile card layout 
 @media (max-width: 560px) {
     .container__grid {
         @include flex(column);
     }
 }
+// ****
