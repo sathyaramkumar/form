@@ -132,6 +132,7 @@
 // mobile view 
 @media (max-width: 560px) {
     .growth__card {
+        margin-top: 20px;
         width: 95vw;
         height: 400px;
         &__graph {

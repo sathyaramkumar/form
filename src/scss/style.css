@@ -1262,6 +1262,7 @@ button {
 
 @media (max-width: 560px) {
   .status__card {
+    margin-top: 20px;
     width: 95vw;
     height: 400px;
   }
@@ -1451,6 +1452,7 @@ button {
 
 @media (max-width: 560px) {
   .growth__card {
+    margin-top: 20px;
     width: 95vw;
     height: 400px;
   }
@@ -1494,6 +1496,7 @@ button {
 
 @media (max-width: 560px) {
   .campaign__card {
+    margin-top: 20px;
     width: 95vw;
   }
 }
@@ -1532,6 +1535,7 @@ button {
 
 @media (max-width: 560px) {
   .post__card {
+    margin-top: 20px;
     width: 95vw;
   }
 }
@@ -1652,6 +1656,7 @@ button {
 
 @media (max-width: 560px) {
   .rate__card {
+    margin-top: 20px;
     width: 95vw;
     height: 380px;
   }
