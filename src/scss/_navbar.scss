@@ -1,34 +1,47 @@
 .navbar {
     padding: 10px;
     background-color: $white;
+    width: 100vw;
     height: 60px;
     position: relative;
-    &__brand {
-        margin-left: 30px;
-        &__link {
-            color: $black;
-            font-size: $largeHeading;
-            font-weight: $bold700;
-            i {
-                font-size: 15px;
-                background-color: $black;
-                color: $white;
-                padding: 10px;
-                border-radius: 50px;
+
+    label {
+        display: none;
+    }
+
+    .toggler__btn {
+        display: none;
+    }
+
+    .container__side {
+        @include flex(row);
+        .navbar__brand {
+            margin-left: 30px;
+            .navbar__brand__link {
+                color: $black;
+                font-size: $largeHeading;
+                font-weight: $bold700;
+                i {
+                    font-size: 15px;
+                    background-color: $black;
+                    color: $white;
+                    padding: 10px;
+                    border-radius: 50px;
+                }
             }
         }
-    }
-    &__list {
-        .navbar__nav {
-            .navbar__item {
-                padding: 8px 25px;
-                margin-left: 20px;
-                .navbar__link {
-                    color: $black;
-                    font-weight: $bold700;
-                    font-size: $mediamText;
-                    &:hover {
-                        color: $textMuted;
+        .navbar__list {
+            .navbar__nav {
+                .navbar__item {
+                    padding: 8px 25px;
+                    margin-left: 20px;
+                    .navbar__link {
+                        color: $black;
+                        font-weight: $bold700;
+                        font-size: $mediamText;
+                        &:hover {
+                            color: $textMuted;
+                        }
                     }
                 }
             }
@@ -54,14 +67,15 @@
                 }
             }
             .notification__dropdown {
+                display: none;
                 background-color: $whiteSmoke;
                 padding: 5px 0;
                 border-radius: 5px;
                 position: absolute;
                 top: 60px;
                 right: 255px;
+                z-index: 50;
                 .dropdown__list {   
-                    display: none;
                     position: relative;             
                     .dropdown__item {
                         padding: 10px 15px;
@@ -113,6 +127,235 @@
             &__link {
                 color: $black;
                 padding: 10px 20px;
+            }
+        }
+    }
+}
+
+// mobile view 
+
+@media (max-width: 560px) {
+    .navbar {
+        position: relative;
+        label {
+            display: block;
+            position: absolute;
+            right: 20px;
+            i {
+                text-align: center;
+                padding: 8px 10px;
+                font-size: 20px;
+                color: $white;
+                background-color: $black;
+                border-radius: 50%;
+            }
+        }
+
+        .toggler__btn {
+            display: none;
+        }
+
+        .toggler__btn:checked ~ .container__side {
+            visibility: visible;
+        }
+
+
+        .container__side {
+            visibility: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            border-radius: 0 40px 40px 0;
+            background-color: $blue;
+            @include flex (column);
+            height: 100vh;
+            z-index: 20;
+
+            .navbar__brand {
+                margin: 20px 5px;
+                width: 200px;
+                .navbar__brand__link {
+                    color: $white;
+                    i {
+                        background-color: $white;
+                        color: $blue;
+                    }
+                }
+            }
+
+            .navbar__list {
+                background-color: $blue;
+                .navbar__nav {
+                    @include flex (column);
+                    .navbar__item {
+                        padding: 28px 0px;
+                        margin-left: 70px;
+                        margin-right: auto;
+                        position: relative;
+                        &:first-child {
+                            .navbar__link {
+                                &::before {
+                                    content: "\f015";
+                                    font-family: "Font Awesome 5 Free";
+                                    display: block;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    left: -40px;
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            .navbar__link {
+                                &::before {
+                                    content: "\f406";
+                                    font-family: "Font Awesome 5 Free";
+                                    display: block;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    left: -40px;
+                                }
+                            }
+                        }
+                        &:nth-child(3) {
+                            .navbar__link {
+                                &::before {
+                                    content: "\f0ca";
+                                    font-family: "Font Awesome 5 Free";
+                                    display: block;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    left: -40px;
+                                }
+                            }
+                        }
+                        &:nth-child(4) {
+                            .navbar__link {
+                                &::before {
+                                    content: "\f0e0";
+                                    font-family: "Font Awesome 5 Free";
+                                    display: block;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    left: -40px;
+                                }
+                            }
+                        }
+                        &:nth-child(5) {
+                            .navbar__link {
+                                &::before {
+                                    content: "\f3c5";
+                                    font-family: "Font Awesome 5 Free";
+                                    display: block;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    left: -40px;
+                                }
+                            }
+                        }
+                        &:nth-child(6) {
+                            .navbar__link {
+                                &::before {
+                                    content: "\f15b";
+                                    font-family: "Font Awesome 5 Free";
+                                    display: block;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    left: -40px;
+                                }
+                            }
+                        }
+                        .navbar__link {
+                            color: $white;
+                            &:hover {
+                                color: $liteOrange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        &__notification {
+            @include flex (row-reverse);
+            margin: 0;
+
+            &__dropdown {
+                .notification__link {
+                    display: block;
+                    padding: 8px 15px;
+                    color: $textMuted;
+                    &:hover {
+                        color: $black;
+                    }
+                }
+                .notification__dropdown {
+                    background-color: $whiteSmoke;
+                    padding: 5px 0;
+                    border-radius: 5px;
+                    width: 160px;
+                    position: absolute;
+                    top: 60px;
+                    left: 70px;
+                    display: none;
+                    .dropdown__list {   
+                        position: relative;             
+                        .dropdown__item {
+                            padding: 10px 15px;
+                            font-size: $mediamText;
+                            border-bottom: 1px solid $thickBackground;
+                            &:first-child {
+                                &::before {
+                                    content: '';
+                                    width: 0;
+                                    height: 0;
+                                    border-bottom: 15px solid $whiteSmoke;
+                                    border-left: 10px solid transparent;
+                                    border-right: 10px solid transparent;
+                                    border-top: 0;
+                                    position: absolute;
+                                    top: -18px;
+                                    left: 30px;
+                                }
+                            }
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                            &:hover {
+                                background-color: $white;
+                            }
+                            i {
+                                color: $red;
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar__avator {
+                background-color: $background;
+                padding: 5px 0;
+                border-radius: 50px;
+                &__img {
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 10px;
+                }
+                .avator__title {
+                    display: none;
+                    &__name {
+                        font-size: $mediamText;
+                    }
+                    &__user__name {
+                        display: block;
+                        font-size: $smallText;
+                        margin-bottom: 30px;
+                    }
+                }
+                &__link {
+                    color: $textMuted;
+                    padding: 5px 10px 5px 5px;
+                }
             }
         }
     }

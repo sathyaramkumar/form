@@ -128,3 +128,17 @@
         }
     }
 }
+
+// mobile view 
+@media (max-width: 560px) {
+    .growth__card {
+        width: 95vw;
+        height: 400px;
+        &__graph {
+            .graph__field {
+                width: 250px;
+                margin: auto;
+            }
+        }
+    }
+}

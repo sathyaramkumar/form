@@ -10,6 +10,13 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f5f5fb;
+  overflow-x: hidden;
+}
+
+@media (max-width: 560px) {
+  body {
+    overflow-x: hidden;
+  }
 }
 
 a {
@@ -74,6 +81,13 @@ button {
 .container {
   width: 1300px;
   margin: auto;
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: 95vw;
+    margin: auto;
+  }
 }
 
 .status__bar {
@@ -160,24 +174,55 @@ button {
   grid-area: post;
 }
 
+@media (max-width: 560px) {
+  .container__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .navbar {
   padding: 10px;
   background-color: white;
+  width: 100vw;
   height: 60px;
   position: relative;
 }
 
-.navbar__brand {
+.navbar label {
+  display: none;
+}
+
+.navbar .toggler__btn {
+  display: none;
+}
+
+.navbar .container__side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.navbar .container__side .navbar__brand {
   margin-left: 30px;
 }
 
-.navbar__brand__link {
+.navbar .container__side .navbar__brand .navbar__brand__link {
   color: black;
   font-size: 25px;
   font-weight: 700;
 }
 
-.navbar__brand__link i {
+.navbar .container__side .navbar__brand .navbar__brand__link i {
   font-size: 15px;
   background-color: black;
   color: white;
@@ -185,18 +230,18 @@ button {
   border-radius: 50px;
 }
 
-.navbar__list .navbar__nav .navbar__item {
+.navbar .container__side .navbar__list .navbar__nav .navbar__item {
   padding: 8px 25px;
   margin-left: 20px;
 }
 
-.navbar__list .navbar__nav .navbar__item .navbar__link {
+.navbar .container__side .navbar__list .navbar__nav .navbar__item .navbar__link {
   color: black;
   font-weight: 700;
   font-size: 13px;
 }
 
-.navbar__list .navbar__nav .navbar__item .navbar__link:hover {
+.navbar .container__side .navbar__list .navbar__nav .navbar__item .navbar__link:hover {
   color: #848488;
 }
 
@@ -225,16 +270,17 @@ button {
 }
 
 .navbar__notification__dropdown .notification__dropdown {
+  display: none;
   background-color: whitesmoke;
   padding: 5px 0;
   border-radius: 5px;
   position: absolute;
   top: 60px;
   right: 255px;
+  z-index: 50;
 }
 
 .navbar__notification__dropdown .notification__dropdown .dropdown__list {
-  display: none;
   position: relative;
 }
 
@@ -288,6 +334,214 @@ button {
 .navbar__notification .navbar__avator__link {
   color: black;
   padding: 10px 20px;
+}
+
+@media (max-width: 560px) {
+  .navbar {
+    position: relative;
+  }
+  .navbar label {
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
+  .navbar label i {
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+  }
+  .navbar .toggler__btn {
+    display: none;
+  }
+  .navbar .toggler__btn:checked ~ .container__side {
+    visibility: visible;
+  }
+  .navbar .container__side {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 0 40px 40px 0;
+    background-color: #478cf6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+    z-index: 20;
+  }
+  .navbar .container__side .navbar__brand {
+    margin: 20px 5px;
+    width: 200px;
+  }
+  .navbar .container__side .navbar__brand .navbar__brand__link {
+    color: white;
+  }
+  .navbar .container__side .navbar__brand .navbar__brand__link i {
+    background-color: white;
+    color: #478cf6;
+  }
+  .navbar .container__side .navbar__list {
+    background-color: #478cf6;
+  }
+  .navbar .container__side .navbar__list .navbar__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item {
+    padding: 28px 0px;
+    margin-left: 70px;
+    margin-right: auto;
+    position: relative;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item:first-child .navbar__link::before {
+    content: "\f015";
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    left: -40px;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item:nth-child(2) .navbar__link::before {
+    content: "\f406";
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    left: -40px;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item:nth-child(3) .navbar__link::before {
+    content: "\f0ca";
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    left: -40px;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item:nth-child(4) .navbar__link::before {
+    content: "\f0e0";
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    left: -40px;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item:nth-child(5) .navbar__link::before {
+    content: "\f3c5";
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    left: -40px;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item:nth-child(6) .navbar__link::before {
+    content: "\f15b";
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    left: -40px;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item .navbar__link {
+    color: white;
+  }
+  .navbar .container__side .navbar__list .navbar__nav .navbar__item .navbar__link:hover {
+    color: #FEB35C;
+  }
+  .navbar__notification {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin: 0;
+  }
+  .navbar__notification__dropdown .notification__link {
+    display: block;
+    padding: 8px 15px;
+    color: #848488;
+  }
+  .navbar__notification__dropdown .notification__link:hover {
+    color: black;
+  }
+  .navbar__notification__dropdown .notification__dropdown {
+    background-color: whitesmoke;
+    padding: 5px 0;
+    border-radius: 5px;
+    width: 160px;
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    display: none;
+  }
+  .navbar__notification__dropdown .notification__dropdown .dropdown__list {
+    position: relative;
+  }
+  .navbar__notification__dropdown .notification__dropdown .dropdown__list .dropdown__item {
+    padding: 10px 15px;
+    font-size: 13px;
+    border-bottom: 1px solid #e4e4ee;
+  }
+  .navbar__notification__dropdown .notification__dropdown .dropdown__list .dropdown__item:first-child::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid whitesmoke;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 0;
+    position: absolute;
+    top: -18px;
+    left: 30px;
+  }
+  .navbar__notification__dropdown .notification__dropdown .dropdown__list .dropdown__item:last-child {
+    border-bottom: none;
+  }
+  .navbar__notification__dropdown .notification__dropdown .dropdown__list .dropdown__item:hover {
+    background-color: white;
+  }
+  .navbar__notification__dropdown .notification__dropdown .dropdown__list .dropdown__item i {
+    color: #FF423B;
+  }
+  .navbar__notification .navbar__avator {
+    background-color: #f5f5fb;
+    padding: 5px 0;
+    border-radius: 50px;
+  }
+  .navbar__notification .navbar__avator__img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+  }
+  .navbar__notification .navbar__avator .avator__title {
+    display: none;
+  }
+  .navbar__notification .navbar__avator .avator__title__name {
+    font-size: 13px;
+  }
+  .navbar__notification .navbar__avator .avator__title__user__name {
+    display: block;
+    font-size: 10px;
+    margin-bottom: 30px;
+  }
+  .navbar__notification .navbar__avator__link {
+    color: #848488;
+    padding: 5px 10px 5px 5px;
+  }
 }
 
 .status__bar {
@@ -375,6 +629,60 @@ button {
 
 .status__bar__btn__group .dropdown__list .dropdown__item .dropdown__link:hover {
   background-color: #e4e4ee;
+}
+
+@media (max-width: 560px) {
+  .status__bar {
+    margin: 30px 0;
+  }
+  .status__bar__profile .profile__img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  .status__bar__profile .profile__title .profile__sub_title {
+    color: #848488;
+    font-size: 13px;
+  }
+  .status__bar__profile .profile__title__name {
+    font-size: 20px;
+    width: 75vw;
+  }
+  .status__bar__profile .profile__title__name i {
+    font-size: 15px;
+    color: #FEB35C;
+  }
+  .status__bar__btn__group {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .status__bar__btn__group .btn:first-child {
+    margin-left: 15px;
+  }
+  .status__bar__btn__group .dropdown {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  .status__bar__btn__group .dropdown__list {
+    display: none;
+    top: -110px;
+  }
+  .status__bar__btn__group .dropdown__list .dropdown__item:first-child::before {
+    top: 88px;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
 }
 
 .performance__card {
@@ -697,6 +1005,169 @@ button {
   background-color: #93DAF6;
 }
 
+@media (max-width: 560px) {
+  .performance__card {
+    width: 95vw;
+    position: relative;
+  }
+  .performance__card__heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 15px;
+  }
+  .performance__card__heading i {
+    margin-left: auto;
+    color: #848488;
+  }
+  .performance__card .card__graph__title {
+    font-size: 30px;
+  }
+  .performance__card .card__graph__sub_title {
+    font-size: 15px;
+    color: #848488;
+  }
+  .performance__card .card__graph__field {
+    margin: 20px 0;
+  }
+  .performance__card .card__graph__field .vertical__measure span {
+    font-size: 7px;
+    position: relative;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(1)::before {
+    top: 25px;
+    left: 20px;
+    width: 84vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(2)::before {
+    top: 25px;
+    left: 20px;
+    width: 84vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(3)::before {
+    top: 25px;
+    left: 20px;
+    width: 84vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(4)::before {
+    top: 25px;
+    left: 20px;
+    width: 84vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(5)::before {
+    top: 25px;
+    left: 20px;
+    width: 84vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(6)::before {
+    top: 25px;
+    left: 20px;
+    width: 84vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(7)::before {
+    top: 25px;
+    left: 20px;
+    width: 84vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:nth-child(8)::before {
+    top: 25px;
+    left: 20px;
+    width: 84vw;
+  }
+  .performance__card .card__graph__field .vertical__measure span:last-child {
+    padding-bottom: 0;
+  }
+  .performance__card .card__graph__field .vertical__measure span:last-child::before {
+    top: 25px;
+    left: 20px;
+    width: 84vw;
+  }
+  .performance__card .card__graph__field .horizontal__measure {
+    margin-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .performance__card .card__graph__field .horizontal__measure span {
+    padding: 0 9px;
+    font-size: 7px;
+    color: #848488;
+    position: relative;
+  }
+  .performance__card .card__graph__field .horizontal__measure span:first-child::before {
+    top: -408px;
+    left: 0;
+    height: 403px;
+  }
+  .performance__card .card__graph__field .values .add_camp {
+    width: 180px;
+    height: 180px;
+    top: 300px;
+    left: 45px;
+  }
+  .performance__card .card__graph__field .values .test_a1 {
+    width: 90px;
+    height: 90px;
+    top: 410px;
+    left: 190px;
+  }
+  .performance__card .card__graph__field .values .test_b2 {
+    width: 20px;
+    height: 20px;
+    top: 370px;
+    left: 238px;
+  }
+  .performance__card .card__graph__field .values .ebook_4 {
+    width: 40px;
+    height: 40px;
+    top: 510px;
+    left: 290px;
+  }
+  .performance__card .card__graph__field .values .figma_5 {
+    width: 40px;
+    height: 40px;
+    top: 270px;
+    left: 130px;
+  }
+  .performance__card .card__graph__field .values .share_26 {
+    width: 90px;
+    height: 90px;
+    top: 190px;
+    left: 200px;
+  }
+  .performance__card .card__graph__field .values .campaign_7 {
+    width: 40px;
+    height: 40px;
+    top: 130px;
+    left: 290px;
+  }
+  .performance__card .card__graph__field .values .test_b {
+    width: 30px;
+    height: 30px;
+    top: 360px;
+    left: 215px;
+    z-index: 10;
+  }
+  .performance__card .card__graph__color__definition .define__common {
+    padding: 10px 0px;
+    width: 140px;
+  }
+}
+
 .status__card {
   background-color: white;
   border-radius: 15px;
@@ -787,6 +1258,24 @@ button {
   display: inline-block;
   padding: 8px 12px;
   border-radius: 10px;
+}
+
+@media (max-width: 560px) {
+  .status__card {
+    width: 95vw;
+    height: 400px;
+  }
+  .status__card__graph .circular {
+    height: 255px;
+    width: 255px;
+    margin: auto;
+  }
+  .status__card .progress-rate {
+    position: absolute;
+    top: 297px;
+    left: 40%;
+    right: 40%;
+  }
 }
 
 .growth__card {
@@ -960,6 +1449,17 @@ button {
   left: 240px;
 }
 
+@media (max-width: 560px) {
+  .growth__card {
+    width: 95vw;
+    height: 400px;
+  }
+  .growth__card__graph .graph__field {
+    width: 250px;
+    margin: auto;
+  }
+}
+
 .campaign__card {
   background-color: white;
   border-radius: 15px;
@@ -990,6 +1490,12 @@ button {
 .campaign__card .campaign__value small {
   font-size: 13px;
   color: #848488;
+}
+
+@media (max-width: 560px) {
+  .campaign__card {
+    width: 95vw;
+  }
 }
 
 .post__card {
@@ -1024,6 +1530,12 @@ button {
   color: #848488;
 }
 
+@media (max-width: 560px) {
+  .post__card {
+    width: 95vw;
+  }
+}
+
 .feature {
   text-align: center;
   margin: 40px 0;
@@ -1032,6 +1544,12 @@ button {
 .feature__text {
   font-size: 13px;
   color: #848488;
+}
+
+@media (max-width: 560px) {
+  .feature {
+    padding-bottom: 60px;
+  }
 }
 
 .rate__card {
@@ -1130,5 +1648,48 @@ button {
   background-color: rgba(0, 0, 0, 0.192);
   width: 1px;
   height: 170px;
+}
+
+@media (max-width: 560px) {
+  .rate__card {
+    width: 95vw;
+    height: 380px;
+  }
+  .rate__card__graph .graph__field {
+    margin-left: 20px;
+  }
+  .rate__card__graph .graph__field svg {
+    position: absolute;
+    left: 60px;
+    top: 219px;
+    width: 240px;
+  }
+  .rate__card__graph .graph__field__vertical {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .rate__card__graph .graph__field__vertical span:last-child::before {
+    top: 272px;
+    left: 60px;
+    width: 240px;
+    height: 1px;
+  }
+  .rate__card__graph .graph__field__horizontal span {
+    padding: 20px 15px 0 15px;
+  }
+  .rate__card__graph .graph__field__horizontal span:first-child {
+    padding-left: 68px;
+  }
+  .rate__card__graph .graph__field__horizontal span:first-child::before {
+    top: -184px;
+    left: 40px;
+    width: 1px;
+    height: 200px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

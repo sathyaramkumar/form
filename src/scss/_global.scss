@@ -9,6 +9,13 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: $background;
+    overflow-x: hidden;
+}
+
+@media (max-width: 560px) {
+    body {
+        overflow-x: hidden;
+    }
 }
 
 a {

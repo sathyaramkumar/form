@@ -17,6 +17,13 @@
     width: 1300px;
     margin: auto;
 }
+// mobile view
+@media (max-width: 560px) {
+    .container {
+        width: 95vw;
+        margin: auto;
+    }
+}
 
 // status bar 
 .status__bar {
@@ -62,4 +69,11 @@
 
 .post__card {
     grid-area: post;
+}
+
+//mobile card layout 
+@media (max-width: 560px) {
+    .container__grid {
+        @include flex(column);
+    }
 }

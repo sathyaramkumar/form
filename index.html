@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
         <!-- icon link -->
-        <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+        <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
         <!-- google font family link -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,36 +22,43 @@
 
             <header class="navbar">
 
-                <div class="navbar__brand">
-                    <a href="#" class="navbar__brand__link">
-                        <i class="fas fa-paper-plane"></i>
-                        Insights
-                    </a>
+                <label for="togglerBar">
+                    <i class="fas fa-bars"></i> 
+                </label>
+                <input type="checkbox" id="togglerBar" class="toggler__btn" name="checkbox">
+
+                <div class="container__side">
+                    <div class="navbar__brand">
+                        <a href="#" class="navbar__brand__link">
+                            <i class="fas fa-paper-plane"></i>
+                            Insights
+                        </a>
+                    </div>
+    
+                    <nav class="navbar__list">
+    
+                        <ul class="navbar__nav">
+                            <li class="navbar__item">
+                                <a href="#" class="navbar__link">Home</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#" class="navbar__link">Prospects</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#" class="navbar__link">Lists</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#" class="navbar__link">Emails</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#" class="navbar__link">Journeys</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#" class="navbar__link">Forms</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-
-                <nav class="navbar__list">
-
-                    <ul class="navbar__nav">
-                        <li class="navbar__item">
-                            <a href="#" class="navbar__link">Home</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="#" class="navbar__link">Prospects</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="#" class="navbar__link">Lists</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="#" class="navbar__link">Emails</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="#" class="navbar__link">Journeys</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="#" class="navbar__link">Forms</a>
-                        </li>
-                    </ul>
-                </nav>
 
                 <div class="navbar__notification">
                     <a href="#" class="navbar__notification__link">
@@ -380,5 +387,6 @@
                 </p>
             </div>
         </div>
+        
     </body>
 </html>

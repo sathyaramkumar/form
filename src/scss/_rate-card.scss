@@ -73,3 +73,49 @@
         }
     }
 }
+
+//mobile view 
+@media (max-width: 560px) {
+    .rate__card {
+        width: 95vw;
+        height: 380px;
+        &__graph {
+            .graph__field {
+                margin-left: 20px;
+                svg {
+                    position: absolute;
+                    left: 60px;
+                    top: 219px;
+                    width: 240px;
+                }
+                &__vertical {
+                    @include flex(column);
+                    span {
+                        &:last-child {
+                            &::before {
+                                top: 272px;
+                                left: 60px;
+                                width: 240px;
+                                height: 1px;
+                            }
+                        }
+                    }
+                }
+                &__horizontal {
+                    span {
+                        padding: 20px 15px 0 15px;
+                        &:first-child {
+                            padding-left: 68px;
+                            &::before {
+                                top: -184px;
+                                left: 40px;
+                                width: 1px;
+                                height: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

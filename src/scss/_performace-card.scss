@@ -288,3 +288,181 @@
         }
     }
 }
+
+@media (max-width: 560px) {
+    .performance__card {
+        width: 95vw;
+        position: relative;
+        &__heading {
+            @include flex(row);
+            font-size: $mediamHeading;
+            i {
+                margin-left: auto;
+                color: $textMuted;
+            }
+        }
+        .card__graph {
+            &__title {
+                font-size: $extraLargeHeading;
+            }
+            &__sub_title {
+                font-size: $mediamHeading;
+                color: $textMuted;
+            }
+
+
+            &__field {
+                margin: 20px 0;
+                .vertical__measure {
+                    
+                    span {
+                        font-size: $mobileSmallText;
+                        position: relative;
+                        &:nth-child(1) {
+                            &::before {
+                                top: 25px;
+                                left: 20px;
+                                width: 84vw;
+                            }
+                        }
+                        &:nth-child(2) {
+                            &::before {
+                                top: 25px;
+                                left: 20px;
+                                width: 84vw;
+                            }
+                        }
+                        &:nth-child(3) {
+                            &::before {
+                                top: 25px;
+                                left: 20px;
+                                width: 84vw;
+                            }
+                        }
+                        &:nth-child(4) {
+                            &::before {
+                                top: 25px;
+                                left: 20px;
+                                width: 84vw;
+                            }
+                        }
+                        &:nth-child(5) {
+                            &::before {
+                                top: 25px;
+                                left: 20px;
+                                width: 84vw;
+                            }
+                        }
+                        &:nth-child(6) {
+                            &::before {
+                                top: 25px;
+                                left: 20px;
+                                width: 84vw;
+                            }
+                        }
+                        &:nth-child(7) {
+                            &::before {
+                                top: 25px;
+                                left: 20px;
+                                width: 84vw;
+                            }
+                        }
+                        &:nth-child(8) {
+                            &::before {
+                                top: 25px;
+                                left: 20px;
+                                width: 84vw;
+                            }
+                        }
+                        &:last-child {
+                            padding-bottom: 0;
+                            &::before {
+                                top: 25px;
+                                left: 20px;
+                                width: 84vw;
+                            }
+                        }
+                    }
+                }
+
+
+                .horizontal__measure {
+                    margin-left: 20px;
+                    @include flex-jc-ai (row , space-between , center);
+                    span {
+                        padding: 0 9px;
+                        font-size: $mobileSmallText;
+                        color: $textMuted;
+                        position: relative;
+                        &:first-child {
+                            &::before {
+                                top: -408px;
+                                left: 0;
+                                height: 403px;
+                            }
+                        }
+                    }
+                }
+
+
+                .values {
+                    .add_camp {
+                        width: 180px;
+                        height: 180px;
+                        top: 300px;
+                        left: 45px;
+                    }
+                    .test_a1 {
+                        width: 90px;
+                        height: 90px;
+                        top: 410px;
+                        left: 190px;                
+                    }
+                    .test_b2 {
+                        width: 20px;
+                        height: 20px;
+                        top: 370px;
+                        left: 238px;
+                    }
+                    .ebook_4 {
+                        width: 40px;
+                        height: 40px;
+                        top: 510px;
+                        left: 290px;
+                    }
+                    .figma_5 {
+                        width: 40px;
+                        height: 40px;
+                        top: 270px;
+                        left: 130px;
+                    }
+                    .share_26 {
+                        width: 90px;
+                        height: 90px;
+                        top: 190px;
+                        left: 200px;
+                    }
+                    .campaign_7 {
+                        width: 40px;
+                        height: 40px;
+                        top: 130px;
+                        left: 290px;
+                    }
+                    .test_b {
+                        width: 30px;
+                        height: 30px;
+                        top: 360px;
+                        left: 215px;
+                        z-index: 10;
+                    }
+                }
+            }
+            &__color__definition {
+                .define__common {
+                    padding: 10px 0px;
+                    width: 140px;
+                }
+            }
+        }
+    }
+}

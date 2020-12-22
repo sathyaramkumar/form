@@ -22,6 +22,13 @@
     }
 }
 
+// mobile view 
+@media (max-width: 560px) {
+    .campaign__card {
+        width: 95vw;
+    }
+}
+
 .post__card {
     background-color: $white;
     border-radius: 15px;
@@ -46,11 +53,25 @@
     }
 }
 
+// mobile view 
+@media (max-width: 560px) {
+    .post__card {
+        width: 95vw;
+    }
+}
+
 .feature {
     text-align: center;
     margin: 40px 0;
     &__text {
         font-size: $mediamText;
         color: $textMuted;
+    }
+}
+
+// mobile view 
+@media (max-width: 560px) {
+    .feature {
+        padding-bottom: 60px;
     }
 }

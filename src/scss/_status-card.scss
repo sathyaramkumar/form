@@ -77,3 +77,26 @@
     }
 
 }
+
+// mobile view 
+@media (max-width: 560px) {
+    .status__card {
+        width: 95vw;
+        height: 400px;
+        &__graph {
+            .circular {
+                height: 255px;
+                width: 255px;
+                margin: auto;
+            }
+        }
+        .progress-rate {
+            position: absolute;
+            top: 297px;
+            left: 40%;
+            right: 40%;
+
+        }
+    
+    }
+}
