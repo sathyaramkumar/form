@@ -1,132 +1,140 @@
 .navbar {
-    padding: 10px;
     background-color: $white;
-    width: 100vw;
     height: 60px;
-    position: relative;
+    &__container {
+        padding: 10px;
+        background-color: $white;
+        width: 86vw;
+        margin: auto;
+        height: 60px;
+        position: relative;
 
-    label {
-        display: none;
-    }
-
-    .toggler__btn {
-        display: none;
-    }
-
-    .container__side {
-        @include flex(row);
-        .navbar__brand {
-            margin-left: 30px;
-            .navbar__brand__link {
-                color: $black;
-                font-size: $largeHeading;
-                font-weight: $bold700;
-                i {
-                    font-size: 15px;
-                    background-color: $black;
-                    color: $white;
-                    padding: 10px;
-                    border-radius: 50px;
+        label {
+            display: none;
+        }
+    
+        .toggler__btn {
+            display: none;
+        }
+    
+        .container__side {
+            @include flex(row);
+            .navbar__brand {
+                width: 150px;
+                .navbar__brand__link {
+                    color: $black;
+                    font-size: $largeHeading;
+                    font-weight: $bold700;
+                    i {
+                        font-size: 15px;
+                        background-color: $black;
+                        color: $white;
+                        padding: 10px;
+                        border-radius: 50px;
+                    }
                 }
             }
-        }
-        .navbar__list {
-            .navbar__nav {
-                .navbar__item {
-                    padding: 8px 25px;
+            
+            .navbar__list {
+                .navbar__nav {
+                    @include flex-jc-ai (row , space-between , center);
+                    width: 40vw;
                     margin-left: 20px;
-                    .navbar__link {
-                        color: $black;
-                        font-weight: $bold700;
-                        font-size: $mediamText;
-                        &:hover {
-                            color: $textMuted;
+                    .navbar__item {
+                        padding-top: 8px;
+                        .navbar__link {
+                            color: $black;
+                            font-weight: $bold700;
+                            font-size: $mediamText;
+                            &:hover {
+                                color: $textMuted;
+                            }
                         }
                     }
                 }
             }
         }
-    }
-    &__notification {
-        margin: auto 50px auto auto;
-        &__link {
-            color: $textMuted;
-            padding: 9px 15px;
-            font-size: $bold700;
-            &:hover {
-                color: $black;
-            }
-        }
-        &__dropdown {
-            .notification__link {
-                display: block;
-                padding: 8px 15px;
+        .navbar__notification {
+            margin-left: auto;
+            &__link {
                 color: $textMuted;
+                padding: 9px 15px;
+                font-size: $bold700;
                 &:hover {
                     color: $black;
                 }
             }
-            .notification__dropdown {
-                display: none;
-                background-color: $whiteSmoke;
-                padding: 5px 0;
-                border-radius: 5px;
-                position: absolute;
-                top: 60px;
-                right: 255px;
-                z-index: 50;
-                .dropdown__list {   
-                    position: relative;             
-                    .dropdown__item {
-                        padding: 10px 15px;
-                        font-size: $mediamText;
-                        border-bottom: 1px solid $thickBackground;
-                        &:first-child {
-                            &::before {
-                                content: '';
-                                width: 0;
-                                height: 0;
-                                border-bottom: 15px solid $whiteSmoke;
-                                border-left: 10px solid transparent;
-                                border-right: 10px solid transparent;
-                                border-top: 0;
-                                position: absolute;
-                                top: -18px;
-                                left: 130px;
+            &__dropdown {
+                .notification__link {
+                    display: block;
+                    padding: 8px 15px;
+                    color: $textMuted;
+                    &:hover {
+                        color: $black;
+                    }
+                }
+                .notification__dropdown {
+                    display: none;
+                    background-color: $whiteSmoke;
+                    padding: 5px 0;
+                    border-radius: 5px;
+                    position: absolute;
+                    top: 60px;
+                    right: 255px;
+                    z-index: 50;
+                    .dropdown__list {   
+                        position: relative;             
+                        .dropdown__item {
+                            padding: 10px 15px;
+                            font-size: $mediamText;
+                            border-bottom: 1px solid $thickBackground;
+                            &:first-child {
+                                &::before {
+                                    content: '';
+                                    width: 0;
+                                    height: 0;
+                                    border-bottom: 15px solid $whiteSmoke;
+                                    border-left: 10px solid transparent;
+                                    border-right: 10px solid transparent;
+                                    border-top: 0;
+                                    position: absolute;
+                                    top: -18px;
+                                    left: 130px;
+                                }
                             }
-                        }
-                        &:last-child {
-                            border-bottom: none;
-                        }
-                        &:hover {
-                            background-color: $white;
-                        }
-                        i {
-                            color: $red;
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                            &:hover {
+                                background-color: $white;
+                            }
+                            i {
+                                color: $red;
+                            }
                         }
                     }
                 }
             }
-        }
-        .navbar__avator {
-            &__img {
-                width: 40px;
-                height: 40px;
-                margin: 0 10px;
-            }
-            .avator__title {
-                &__name {
-                    font-size: $mediamText;
+            .navbar__avator {
+                @include flex-jc-ai (row , space-between , center);
+                &__img {
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 10px;
                 }
-                &__user__name {
-                    display: block;
-                    font-size: $smallText;
-                    margin-bottom: 30px;
+                .avator__title {
+                    &__name {
+                        font-size: $mediamText;
+                    }
+                    &__user__name {
+                        display: block;
+                        font-size: $smallText;
+                    }
                 }
-            }
-            &__link {
-                color: $black;
-                padding: 10px 20px;
+                &__link {
+                    color: $black;
+                    padding: 10px;
+                }
             }
         }
     }
@@ -136,6 +144,7 @@
 
 @media (max-width: 1000px) {
     .navbar {
+        width: 100vw;
         position: relative;
         label {
             display: block;
@@ -299,7 +308,7 @@
         }
 
 
-        &__notification {
+        .navbar__notification {
             @include flex (row-reverse);
             margin: 0;
 
@@ -387,6 +396,7 @@
 
 @media (max-width: 560px) {
     .navbar {
+        width: 100vw;
         position: relative;
         label {
             display: block;
@@ -428,6 +438,9 @@
                 width: 200px;
                 .navbar__brand__link {
                     color: $white;
+                    background-color: transparent;
+                    border-radius: 50px;
+                    padding-left: 20px;
                     i {
                         background-color: $white;
                         color: $blue;
@@ -440,7 +453,8 @@
                 .navbar__nav {
                     @include flex (column);
                     .navbar__item {
-                        padding: 28px 0px;
+                        background-color: transparent;
+                        padding: 8px 0px;
                         margin-left: 70px;
                         margin-right: auto;
                         position: relative;
@@ -451,6 +465,7 @@
                                     font-family: "Font Awesome 5 Free";
                                     display: block;
                                     font-size: 20px;
+                                    color: $white;
                                     position: absolute;
                                     left: -40px;
                                 }
@@ -463,6 +478,7 @@
                                     font-family: "Font Awesome 5 Free";
                                     display: block;
                                     font-size: 20px;
+                                    color: $white;
                                     position: absolute;
                                     left: -40px;
                                 }
@@ -475,6 +491,7 @@
                                     font-family: "Font Awesome 5 Free";
                                     display: block;
                                     font-size: 20px;
+                                    color: $white;
                                     position: absolute;
                                     left: -40px;
                                 }
@@ -487,6 +504,7 @@
                                     font-family: "Font Awesome 5 Free";
                                     display: block;
                                     font-size: 20px;
+                                    color: $white;
                                     position: absolute;
                                     left: -40px;
                                 }
@@ -499,6 +517,7 @@
                                     font-family: "Font Awesome 5 Free";
                                     display: block;
                                     font-size: 20px;
+                                    color: $white;
                                     position: absolute;
                                     left: -40px;
                                 }
@@ -511,6 +530,7 @@
                                     font-family: "Font Awesome 5 Free";
                                     display: block;
                                     font-size: 20px;
+                                    color: $white;
                                     position: absolute;
                                     left: -40px;
                                 }
@@ -528,7 +548,7 @@
         }
 
 
-        &__notification {
+        .navbar__notification {
             @include flex (row-reverse);
             margin: 0;
 
