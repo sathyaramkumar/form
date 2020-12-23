@@ -2,8 +2,29 @@
 .navbar {
     &__container {
         @include flex (row);
-        .navbar__notification {
+        width: 86vw;
+        margin: auto;
+    }
+}
+
+// tablet view
+@media (max-width: 1000px) {
+    .navbar {
+        &__container {
             @include flex (row);
+            width: 90vw;
+            margin: auto;
+        }
+    }
+}
+
+// mobile view
+@media (max-width: 560px) {
+    .navbar {
+        &__container {
+            @include flex (row);
+            width: 95vw;
+            margin: auto;
         }
     }
 }

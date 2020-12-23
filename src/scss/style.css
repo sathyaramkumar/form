@@ -40,16 +40,36 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 86vw;
+  margin: auto;
 }
 
-.navbar__container .navbar__notification {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+@media (max-width: 1000px) {
+  .navbar__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 90vw;
+    margin: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 95vw;
+    margin: auto;
+  }
 }
 
 .container {
@@ -219,8 +239,6 @@ button {
 .navbar__container {
   padding: 10px;
   background-color: white;
-  width: 86vw;
-  margin: auto;
   height: 60px;
   position: relative;
 }
@@ -294,6 +312,13 @@ button {
 }
 
 .navbar__container .navbar__notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-left: auto;
 }
 

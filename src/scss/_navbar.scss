@@ -4,8 +4,6 @@
     &__container {
         padding: 10px;
         background-color: $white;
-        width: 86vw;
-        margin: auto;
         height: 60px;
         position: relative;
 
@@ -55,6 +53,7 @@
             }
         }
         .navbar__notification {
+            @include flex (row);
             margin-left: auto;
             &__link {
                 color: $textMuted;
