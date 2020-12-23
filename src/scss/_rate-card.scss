@@ -76,11 +76,20 @@
 
 // tablet view
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
     .rate__card {
         width: 44vw;
         height: 380px;
         &__graph {
+            width: 300px;
+            margin: auto;
+            .graph__title {
+               text-align: center;
+            }
+            .graph__sub_title {
+                display: block;
+                text-align: center;
+            }
             .graph__field {
                 margin-left: 20px;
                 svg {
