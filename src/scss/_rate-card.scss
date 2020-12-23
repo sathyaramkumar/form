@@ -81,7 +81,7 @@
         width: 44vw;
         height: 380px;
         &__graph {
-            width: 300px;
+            width: 250px;
             margin: auto;
             .graph__title {
                text-align: center;
@@ -138,6 +138,14 @@
         width: 95vw;
         height: 380px;
         &__graph {
+            margin: 0;
+            .graph__title {
+                text-align: start;
+             }
+             .graph__sub_title {
+                 display: block;
+                 text-align: start;
+             }
             .graph__field {
                 margin-left: 20px;
                 svg {

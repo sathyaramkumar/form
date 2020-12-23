@@ -2271,7 +2271,7 @@ button {
     height: 380px;
   }
   .rate__card__graph {
-    width: 300px;
+    width: 250px;
     margin: auto;
   }
   .rate__card__graph .graph__title {
@@ -2337,6 +2337,16 @@ button {
     margin-top: 20px;
     width: 95vw;
     height: 380px;
+  }
+  .rate__card__graph {
+    margin: 0;
+  }
+  .rate__card__graph .graph__title {
+    text-align: start;
+  }
+  .rate__card__graph .graph__sub_title {
+    display: block;
+    text-align: start;
   }
   .rate__card__graph .graph__field {
     margin-left: 20px;
